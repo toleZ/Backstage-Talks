@@ -7,4 +7,9 @@
 * {
   font-family: "Roboto", sans-serif;
   color: "#251d20";
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
