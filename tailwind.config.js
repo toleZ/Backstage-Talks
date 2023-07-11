@@ -12,6 +12,7 @@ export default {
         ffbe00: "#ffbe00",
         "1d3fbb": "#1d3fbb",
         e30512: "#e30512",
+        "251d20": "#251d20",
       },
     },
   },

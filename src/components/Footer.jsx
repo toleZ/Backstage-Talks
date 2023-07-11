@@ -23,15 +23,15 @@ const Footer = () => {
         </a>
       </section>
 
-      <section>
-        <ul>
-          <li>Issue #1</li>
-          <li>Issue #2</li>
-          <li>Issue #3</li>
-          <li>Issue #4</li>
-          <li>Issue #5</li>
-          <li>Issue #6</li>
-          <li>Issue #7</li>
+      <section className="pt-12">
+        <ul className="text-lg">
+          <li className="hover:underline">Issue #7</li>
+          <li className="hover:underline">Issue #6</li>
+          <li className="hover:underline">Issue #5</li>
+          <li className="hover:underline">Issue #4</li>
+          <li className="hover:underline">Issue #3</li>
+          <li className="hover:underline">Issue #2</li>
+          <li className="hover:underline">Issue #1</li>
         </ul>
       </section>
     </footer>
