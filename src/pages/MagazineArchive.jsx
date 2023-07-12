@@ -3,13 +3,13 @@ import { Element } from "react-scroll";
 import useIsInView from "../hooks/useIsInView";
 
 const issuesCfgs = {
-  7: { "bg-color": "#FF608C", "text-color": "#FFFFFF" },
-  6: { "bg-color": "#FFFFFF", "text-color": "#FF608C" },
-  5: { "bg-color": "#00C1B5", "text-color": "#FFFFFF" },
-  4: { "bg-color": "#FF6519", "text-color": "#FFFFFF" },
-  3: { "bg-color": "#FFBE00", "text-color": "#FFFFFF" },
-  2: { "bg-color": "#1D3FBB", "text-color": "#FFFFFF" },
-  1: { "bg-color": "#E30512", "text-color": "#FFFFFF" },
+  7: { "bg-color": "bg-FF608C", "text-color": "text-FFFFFF" },
+  6: { "bg-color": "bg-FFFFFF", "text-color": "text-FF608C" },
+  5: { "bg-color": "bg-00C1B5", "text-color": "text-FFFFFF" },
+  4: { "bg-color": "bg-FF6519", "text-color": "text-FFFFFF" },
+  3: { "bg-color": "bg-FFBE00", "text-color": "text-FFFFFF" },
+  2: { "bg-color": "bg-1D3FBB", "text-color": "text-FFFFFF" },
+  1: { "bg-color": "bg-E30512", "text-color": "text-FFFFFF" },
 };
 
 const MagazineArchive = () => {
@@ -22,7 +22,7 @@ const MagazineArchive = () => {
 
   return (
     <main
-      className={`relative w-full h-full bg-[${issuesCfgs[curItem]["bg-color"]}] transition-all duration-500`}
+      className={`relative w-full h-full ${issuesCfgs[curItem]["bg-color"]} transition-all duration-500`}
     >
       <Element
         name="7"
@@ -39,7 +39,7 @@ const MagazineArchive = () => {
           <span className="font-bold">
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               BUY HERE
             </a>{" "}
@@ -48,7 +48,7 @@ const MagazineArchive = () => {
           <span className="font-bold">
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               BUY HERE
             </a>{" "}
@@ -59,7 +59,7 @@ const MagazineArchive = () => {
             or in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores
             </a>
@@ -79,7 +79,7 @@ const MagazineArchive = () => {
           <h2 className="text-lg font-bold">Issue #6</h2>
           <a
             href="#"
-            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            className={`py-4 -bold text-[${issuesCfgs[curItem]["text-color"]} hover:underline`}
           >
             BUY HERE
           </a>
@@ -88,7 +88,7 @@ const MagazineArchive = () => {
             or in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores
             </a>
@@ -110,7 +110,7 @@ const MagazineArchive = () => {
 
           <a
             href="#"
-            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            className={`py-4 -bold text-[${issuesCfgs[curItem]["text-color"]} hover:underline`}
           >
             BUY HERE
           </a>
@@ -119,7 +119,7 @@ const MagazineArchive = () => {
             or in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores
             </a>
@@ -142,7 +142,7 @@ const MagazineArchive = () => {
             If you are lucky, you may get the last pieces in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores.
             </a>
@@ -163,7 +163,7 @@ const MagazineArchive = () => {
 
           <a
             href="#"
-            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            className={`py-4 -bold text-[${issuesCfgs[curItem]["text-color"]} hover:underline`}
           >
             BUY HERE
           </a>
@@ -172,7 +172,7 @@ const MagazineArchive = () => {
             or in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores
             </a>
@@ -193,7 +193,7 @@ const MagazineArchive = () => {
 
           <a
             href="#"
-            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            className={`py-4 -bold text-[${issuesCfgs[curItem]["text-color"]} hover:underline`}
           >
             BUY HERE
           </a>
@@ -202,7 +202,7 @@ const MagazineArchive = () => {
             or in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores
             </a>
@@ -225,7 +225,7 @@ const MagazineArchive = () => {
             If you are lucky, you may get the last pieces in{" "}
             <a
               href="#"
-              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+              className={`${issuesCfgs[curItem]["text-color"]} hover:underline`}
             >
               selected stores.
             </a>
