@@ -1,11 +1,32 @@
+import { useEffect, useState } from "react";
 import { Element } from "react-scroll";
+import useIsInView from "../hooks/useIsInView";
+
+const issuesCfgs = {
+  7: { "bg-color": "#FF608C", "text-color": "#FFFFFF" },
+  6: { "bg-color": "#FFFFFF", "text-color": "#FF608C" },
+  5: { "bg-color": "#00C1B5", "text-color": "#FFFFFF" },
+  4: { "bg-color": "#FF6519", "text-color": "#FFFFFF" },
+  3: { "bg-color": "#FFBE00", "text-color": "#FFFFFF" },
+  2: { "bg-color": "#1D3FBB", "text-color": "#FFFFFF" },
+  1: { "bg-color": "#E30512", "text-color": "#FFFFFF" },
+};
 
 const IssuesList = () => {
+  const [curItem, setCurItem] = useState(7);
+  const visibleElements = useIsInView("name");
+
+  useEffect(() => {
+    setCurItem(visibleElements || 7);
+  }, [visibleElements]);
+
   return (
-    <main className="relative w-full h-screen">
+    <main
+      className={`relative w-full h-full bg-[${issuesCfgs[curItem]["bg-color"]}] transition-all duration-500`}
+    >
       <Element
-        name="issue#7"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#FF608C]"
+        name="7"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover_issue_7.png"
@@ -16,13 +37,19 @@ const IssuesList = () => {
           <h2 className="text-lg font-bold mb-4">Issue #7</h2>
 
           <span className="font-bold">
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               BUY HERE
             </a>{" "}
             (Europe)
           </span>
           <span className="font-bold">
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               BUY HERE
             </a>{" "}
             (UK & Overseas)
@@ -30,15 +57,18 @@ const IssuesList = () => {
 
           <span className="font-bold text-sm mt-4">
             or in{" "}
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores
             </a>
           </span>
         </div>
       </Element>
       <Element
-        name="issue#6"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#ffffff]"
+        name="6"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover_issue_6.png"
@@ -47,25 +77,27 @@ const IssuesList = () => {
         />
         <div className="text-center flex flex-col">
           <h2 className="text-lg font-bold">Issue #6</h2>
-
           <a
             href="#"
-            className="py-4 block font-bold text-[#FF608C] hover:underline"
+            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
           >
             BUY HERE
           </a>
 
           <span className="font-bold text-sm">
             or in{" "}
-            <a href="#" className="text-[#FF608C] hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores
             </a>
           </span>
         </div>
       </Element>
       <Element
-        name="issue#5"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#00C1B5]"
+        name="5"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover_issue_5.png"
@@ -78,22 +110,25 @@ const IssuesList = () => {
 
           <a
             href="#"
-            className="py-4 block font-bold text-white hover:underline"
+            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
           >
             BUY HERE
           </a>
 
           <span className="font-bold text-sm">
             or in{" "}
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores
             </a>
           </span>
         </div>
       </Element>
       <Element
-        name="issue#4"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#FF6519]"
+        name="4"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover_issue_4.png"
@@ -105,15 +140,18 @@ const IssuesList = () => {
 
           <span className="font-bold text-sm pt-4">
             If you are lucky, you may get the last pieces in{" "}
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores.
             </a>
           </span>
         </div>
       </Element>
       <Element
-        name="issue#3"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#FFBE00] "
+        name="3"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover_issue_3.png"
@@ -125,22 +163,25 @@ const IssuesList = () => {
 
           <a
             href="#"
-            className="py-4 block font-bold text-white hover:underline"
+            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
           >
             BUY HERE
           </a>
 
           <span className="font-bold text-sm">
             or in{" "}
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores
             </a>
           </span>
         </div>
       </Element>
       <Element
-        name="issue#2"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#1D3FBB]"
+        name="2"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover2017.png"
@@ -152,22 +193,25 @@ const IssuesList = () => {
 
           <a
             href="#"
-            className="py-4 block font-bold text-white hover:underline"
+            className={`py-4 block font-bold text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
           >
             BUY HERE
           </a>
 
           <span className="font-bold text-sm">
             or in{" "}
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores
             </a>
           </span>
         </div>
       </Element>
       <Element
-        name="issue#1"
-        className="h-full w-full flex flex-col items-center justify-center bg-[#E30512]"
+        name="1"
+        className="h-screen w-full flex flex-col items-center justify-center bg-transparent observe"
       >
         <img
           src="/img/issues/backstagetalks_cover2016_n.png"
@@ -179,7 +223,10 @@ const IssuesList = () => {
 
           <span className="font-bold text-sm pt-4">
             If you are lucky, you may get the last pieces in{" "}
-            <a href="#" className="text-white hover:underline">
+            <a
+              href="#"
+              className={`text-[${issuesCfgs[curItem]["text-color"]}] hover:underline`}
+            >
               selected stores.
             </a>
           </span>

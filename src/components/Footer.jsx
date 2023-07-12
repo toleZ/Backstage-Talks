@@ -26,25 +26,25 @@ const Footer = () => {
       </section>
 
       <section className="pt-12 flex flex-col text-xl">
-        <Link to="issue#7" className="hover:underline hover:cursor-pointer">
+        <Link to="7" className="hover:underline hover:cursor-pointer">
           Issue #7
         </Link>
-        <Link to="issue#6" className="hover:underline hover:cursor-pointer">
+        <Link to="6" className="hover:underline hover:cursor-pointer">
           Issue #6
         </Link>
-        <Link to="issue#5" className="hover:underline hover:cursor-pointer">
+        <Link to="5" className="hover:underline hover:cursor-pointer">
           Issue #5
         </Link>
-        <Link to="issue#4" className="hover:underline hover:cursor-pointer">
+        <Link to="4" className="hover:underline hover:cursor-pointer">
           Issue #4
         </Link>
-        <Link to="issue#3" className="hover:underline hover:cursor-pointer">
+        <Link to="3" className="hover:underline hover:cursor-pointer">
           Issue #3
         </Link>
-        <Link to="issue#2" className="hover:underline hover:cursor-pointer">
+        <Link to="2" className="hover:underline hover:cursor-pointer">
           Issue #2
         </Link>
-        <Link to="issue#1" className="hover:underline hover:cursor-pointer">
+        <Link to="1" className="hover:underline hover:cursor-pointer">
           Issue #1
         </Link>
       </section>
