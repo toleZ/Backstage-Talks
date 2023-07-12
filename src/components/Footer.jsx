@@ -1,6 +1,9 @@
 import { Link } from "react-scroll";
+import useIsInView from "../hooks/useIsInView";
 
 const Footer = () => {
+  const visibleElements = useIsInView("name");
+
   return (
     <footer className="z-10 hidden fixed bottom-0 w-full p-4 lg:flex items-center justify-between">
       <section className="w-80">
@@ -26,25 +29,60 @@ const Footer = () => {
       </section>
 
       <section className="pt-12 flex flex-col text-xl">
-        <Link to="7" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="7"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "7" && "font-bold"
+          }`}
+        >
           Issue #7
         </Link>
-        <Link to="6" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="6"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "6" && "font-bold"
+          }`}
+        >
           Issue #6
         </Link>
-        <Link to="5" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="5"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "5" && "font-bold"
+          }`}
+        >
           Issue #5
         </Link>
-        <Link to="4" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="4"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "4" && "font-bold"
+          }`}
+        >
           Issue #4
         </Link>
-        <Link to="3" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="3"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "3" && "font-bold"
+          }`}
+        >
           Issue #3
         </Link>
-        <Link to="2" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="2"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "2" && "font-bold"
+          }`}
+        >
           Issue #2
         </Link>
-        <Link to="1" className="hover:underline hover:cursor-pointer">
+        <Link
+          to="1"
+          className={`hover:underline hover:cursor-pointer ${
+            visibleElements === "1" && "font-bold"
+          }`}
+        >
           Issue #1
         </Link>
       </section>
