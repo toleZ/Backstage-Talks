@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="z-10 fixed bottom-0 w-full p-4 flex items-center justify-between">
+    <footer className="z-10 hidden fixed bottom-0 w-full p-4 lg:flex items-center justify-between">
       <section className="w-80">
         <p className="font-bold text-lg">
           Backstage Talks is a magazine of casual, but in depth dialogues on
