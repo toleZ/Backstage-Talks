@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useIsInView = (propertyName) => {
+const useIsInView = (attribute) => {
   const [mostVisibleElement, setMostVisibleElement] = useState(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const useIsInView = (propertyName) => {
         setMostVisibleElement(mostVisible);
       },
       {
-        threshold: 0.01, // Adjust the threshold as needed
+        threshold: 0.75,
       }
     );
 
@@ -33,16 +33,33 @@ const useIsInView = (propertyName) => {
       observer.observe(element);
     });
 
+    const handleScroll = () => {
+      const scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight =
+        document.documentElement.scrollHeight || document.body.scrollHeight;
+      const clientHeight =
+        document.documentElement.clientHeight || document.body.clientHeight;
+      const scrollPosition = scrollTop / (scrollHeight - clientHeight);
+
+      if (scrollPosition === 0) {
+        setMostVisibleElement(elements[0]);
+      } else if (scrollPosition === 1) {
+        setMostVisibleElement(elements[elements.length - 1]);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       elements.forEach((element) => {
         observer.unobserve(element);
       });
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  return mostVisibleElement
-    ? mostVisibleElement.getAttribute(propertyName)
-    : null;
+  return mostVisibleElement ? mostVisibleElement.getAttribute(attribute) : null;
 };
 
 export default useIsInView;
