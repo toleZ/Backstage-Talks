@@ -1,27 +1,50 @@
+import { Element } from "react-scroll";
+
 const IssuesList = () => {
   return (
-    <main className="relative w-full h-screen overflow-y-auto snap-y snap-mandatory snap-always">
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+    <main className="relative w-full h-screen snap-y snap-mandatory snap-always">
+      <Element
+        name="issue#7"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #7
-      </article>
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+      </Element>
+      <Element
+        name="issue#6"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #6
-      </article>
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+      </Element>
+      <Element
+        name="issue#5"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #5
-      </article>
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+      </Element>
+      <Element
+        name="issue#4"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #4
-      </article>
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+      </Element>
+      <Element
+        name="issue#3"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #3
-      </article>
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+      </Element>
+      <Element
+        name="issue#2"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #2
-      </article>
-      <article className="h-full w-full flex flex-col items-center justify-center snap-center">
+      </Element>
+      <Element
+        name="issue#1"
+        className="h-full w-full flex flex-col items-center justify-center snap-center"
+      >
         Issue #1
-      </article>
+      </Element>
     </main>
   );
 };

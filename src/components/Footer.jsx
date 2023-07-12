@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 const Footer = () => {
   return (
     <footer className="z-10 fixed bottom-0 w-full p-4 flex items-center justify-between">
@@ -23,16 +25,28 @@ const Footer = () => {
         </a>
       </section>
 
-      <section className="pt-12">
-        <ul className="text-lg">
-          <li className="hover:underline">Issue #7</li>
-          <li className="hover:underline">Issue #6</li>
-          <li className="hover:underline">Issue #5</li>
-          <li className="hover:underline">Issue #4</li>
-          <li className="hover:underline">Issue #3</li>
-          <li className="hover:underline">Issue #2</li>
-          <li className="hover:underline">Issue #1</li>
-        </ul>
+      <section className="pt-12 flex flex-col text-xl">
+        <Link to="issue#7" className="hover:underline hover:cursor-pointer">
+          Issue #7
+        </Link>
+        <Link to="issue#6" className="hover:underline hover:cursor-pointer">
+          Issue #6
+        </Link>
+        <Link to="issue#5" className="hover:underline hover:cursor-pointer">
+          Issue #5
+        </Link>
+        <Link to="issue#4" className="hover:underline hover:cursor-pointer">
+          Issue #4
+        </Link>
+        <Link to="issue#3" className="hover:underline hover:cursor-pointer">
+          Issue #3
+        </Link>
+        <Link to="issue#2" className="hover:underline hover:cursor-pointer">
+          Issue #2
+        </Link>
+        <Link to="issue#1" className="hover:underline hover:cursor-pointer">
+          Issue #1
+        </Link>
       </section>
     </footer>
   );
